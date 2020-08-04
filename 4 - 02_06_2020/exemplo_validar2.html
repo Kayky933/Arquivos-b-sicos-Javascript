@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+1234567890
+seunome@x.com
+
+<head>
+    <script> function validarForm() {
+            var val = document.getElementById("valido");  // obtem o elemento "<p>" de id "valido"
+            var msgErro = "";
+
+            var nome = document.forms["meuForm"]["nome"].value; //obtem o elemento "nome" do form "meuForm"
+            if (nome == null || nome == "" || nome.length < 5 ) {
+                msgErro += "O Nome deve ser preenchido e ter no mínimo 5 letras! <br>";
+            }
+
+            var email = document.forms["meuForm"]["email"].value;
+            var atpos = email.indexOf("@");  //obtem a posição em que o @ está na string
+            var dotpos = email.lastIndexOf(".");  //obtem a última posição em que o . está na string
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+                msgErro += "Digite um e-mail válido! <br>";
+            }
+
+            if (msgErro == "") {
+                return true;
+            }
+            else {
+                val.style.color = "#FF0000";
+                val.innerHTML = msgErro;
+                return false;
+            }
+
+        } //Fim function 
+    </script>
+</head>
+
+<body>
+    <form name="meuForm" action="recebe.php" onsubmit="return validarForm();" method="post">
+
+        Nome: <input type="text" name="nome">
+
+        e-mail: <input type="text" name="email">
+
+        <input type="submit" value="Enviar"> </form>
+
+    <p id="valido">Preencha o formulário e clique em Enviar</p>
+</body>
+
+</html>

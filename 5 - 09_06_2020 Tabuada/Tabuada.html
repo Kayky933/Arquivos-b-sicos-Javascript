@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tabuada</title>
+</head>
+
+<body>
+    <label>Digite um número<br>Para saber a tábuada dele</label><br>
+    <input type="text" id="numero">
+    <button onclick="calcular()">Calcular</button>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+       
+        var numero = document.getElementById("numero").value;
+        var cont = 0;
+        var resultado; 
+
+    while (cont <= 9)
+         {
+            cont++;
+           resultado =  cont * numero;
+            document.write("<br>" + numero + " X " + cont + " = " + resultado);
+        }
+    }
+</script>

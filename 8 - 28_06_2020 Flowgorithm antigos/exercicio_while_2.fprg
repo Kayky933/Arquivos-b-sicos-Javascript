@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Controle"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-10 08:10:24 "/>
+        <attribute name="created" value="Q29udHJvbGU7UENQUk9GLUxBQjAxOzIwMjAtMDMtMTA7IjA3OjU0OjM0ICI7MjgzMQ=="/>
+        <attribute name="edited" value="Q29udHJvbGU7UENQUk9GLUxBQjAxOzIwMjAtMDMtMTA7IjA4OjEwOjI0ICI7MTsyOTMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="CONTADOR" type="Integer" array="False" size=""/>
+            <declare name="NUMERO" type="Integer" array="False" size=""/>
+            <declare name="SOMA" type="Integer" array="False" size=""/>
+            <assign variable="SOMA" expression="0"/>
+            <assign variable="CONTADOR" expression="0"/>
+            <do expression="CONTADOR &lt; 5">
+                <assign variable="CONTADOR" expression="CONTADOR +1"/>
+                <input variable="NUMERO"/>
+                <assign variable="SOMA" expression="SOMA + NUMERO"/>
+            </do>
+            <output expression="SOMA" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

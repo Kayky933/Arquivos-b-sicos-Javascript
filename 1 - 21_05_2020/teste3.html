@@ -1,0 +1,22 @@
+
+
+<label>Número A</label>
+<input type="text" name="numeroA" id="numeroA">
+<label>Número B</label>
+<input type="text" name="numeroB" id="numeroB">
+
+<input type="button" onclick="calcular()" value="Somar">
+
+
+<script>
+function calcular() {
+    var a = document.getElementById("numeroA").value;
+    var b = document.getElementById("numeroB").value;
+
+    var soma = Number(a) + Number(b);
+
+    alert("O Resultado é:" + soma );
+}
+
+
+</script>

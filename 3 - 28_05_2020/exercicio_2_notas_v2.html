@@ -1,0 +1,74 @@
+
+<body>
+
+    <label>Nota da prova 1</label>
+    <input type="text" id="nota1">
+
+    <label>Nota da prova 2</label>
+    <input type="text" id="nota2">
+
+    <input type="button" onclick="validar()" value="Calcular média">
+
+    <label id="resultado"></label>
+    <label id="mencao"></label>
+
+    <div id="resultadoImg"></div>
+
+</body>
+<script>
+    function validar()
+    {
+        if( validaNota(1) && validaNota(2) )
+            calcular();
+    }
+
+    function validaNota(numero) {
+        var n1 = Number(document.getElementById("nota" + numero).value);
+        if( n1 < 0 || n1 > 10 ) 
+        {
+            alert("A nota "+numero+ " deve estar entre 0 e 10 !");
+            return false;
+        }
+        return true;
+    }
+
+    function calcular() {
+        var n1 = Number(document.getElementById("nota1").value);
+        var n2 = Number(document.getElementById("nota2").value);
+
+        media = (n1 + n2) / 2;
+        document.getElementById("resultado").innerHTML = "Media:" + media;
+
+        if (media < 5) 
+        {
+            document.getElementById("mencao").innerHTML = "I";
+            emoticon("i");
+        }
+        else 
+        {
+            if (media < 7) 
+            {
+                document.getElementById("mencao").innerHTML = "R";
+                emoticon("r");
+            }
+            else 
+            {
+                if( media <= 8.5 ) 
+                {
+                    document.getElementById("mencao").innerHTML = "B";
+                    emoticon("b");
+                }
+                else
+                {
+                    document.getElementById("mencao").innerHTML = "MB";
+                    emoticon("mb");
+                }
+            }
+        }
+    }
+    
+    function emoticon(mencao) {
+        document.getElementById("resultadoImg").innerHTML = '<img src="img/' + mencao + '.jpg">';
+//        document.getElementById("resultadoImg").innerHTML =  "<img src='img/" +  mencao +  ".jpg'>";
+    }
+</script>

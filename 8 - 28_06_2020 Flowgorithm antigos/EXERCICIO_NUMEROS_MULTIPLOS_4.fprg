@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marcio Nizzola"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-05-14 10:33:27 "/>
+        <attribute name="created" value="TWFyY2lvIE5penpvbGE7MDAwODcwOzIwMjAtMDUtMTQ7IjEwOjIzOjE0ICI7Mjg2MQ=="/>
+        <attribute name="edited" value="TWFyY2lvIE5penpvbGE7MDAwODcwOzIwMjAtMDUtMTQ7IjEwOjMzOjI3ICI7MTsyOTc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NUMERO" type="Integer" array="False" size=""/>
+            <declare name="DIVISOR" type="Integer" array="False" size=""/>
+            <declare name="SOMA" type="Integer" array="False" size=""/>
+            <for variable="NUMERO" start="0" end="200" direction="inc" step="1">
+                <assign variable="DIVISOR" expression="NUMERO /4"/>
+                <if expression="(DIVISOR *4) = NUMERO">
+                    <then>
+                        <output expression="NUMERO" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

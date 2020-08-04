@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-05-07 09:35:08 "/>
+        <attribute name="created" value="VXNlcjtVU0VSLVBDOzIwMjAtMDUtMDc7IjA0OjAyOjAxICI7MjEwNA=="/>
+        <attribute name="edited" value="VXNlcjtVU0VSLVBDOzIwMjAtMDUtMDc7IjA1OjQwOjE3ICI7MTsyMjIy"/>
+        <attribute name="edited" value="TWFyY2lvIE5penpvbGE7MDAwODcwOzIwMjAtMDUtMDc7IjA5OjM1OjA4ICI7MTsyOTg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TOTALDETIROS" type="Integer" array="False" size=""/>
+            <declare name="TOTALDEACERTOS" type="Integer" array="False" size=""/>
+            <declare name="SOMATDT" type="Integer" array="False" size=""/>
+            <assign variable="SOMATDT" expression="0"/>
+            <declare name="SOMATDA" type="Integer" array="False" size=""/>
+            <assign variable="SOMATDA" expression="0"/>
+            <declare name="PERCENTUAL" type="Integer" array="False" size=""/>
+            <declare name="CONTINUA" type="String" array="False" size=""/>
+            <do expression="CONTINUA = &quot;S&quot; || CONTINUA = &quot;s&quot;">
+                <output expression="&quot;Qual foi o total de tiros disparados?&quot;" newline="True"/>
+                <input variable="TOTALDETIROS"/>
+                <output expression="&quot;Qual foi o total de tiros disparados que acertaram o alvo?&quot;" newline="True"/>
+                <input variable="TOTALDEACERTOS"/>
+                <assign variable="SOMATDT" expression="SOMATDT + TOTALDETIROS"/>
+                <assign variable="SOMATDA" expression="SOMATDA + TOTALDEACERTOS"/>
+                <output expression="&quot;H&#225; mais algum soldado?&quot;" newline="True"/>
+                <input variable="CONTINUA"/>
+            </do>
+            <output expression="&quot;Total de tiros: &quot;" newline="True"/>
+            <output expression="SOMATDT" newline="True"/>
+            <output expression="&quot;Percentual de acertos: &quot;" newline="True"/>
+            <assign variable="PERCENTUAL" expression="100/SOMATDT*SOMATDA"/>
+            <output expression="PERCENTUAL" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

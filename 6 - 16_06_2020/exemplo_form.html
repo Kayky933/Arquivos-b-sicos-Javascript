@@ -1,0 +1,111 @@
+<html>
+<table>
+
+    <tr>
+        <td>Nome</td>
+        <td>
+            <input type="text" name="nome" id="nome" maxlength="50" onchange="validaVazio(document.getElementById('nome').val)">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Telefone</td>
+        <td>
+            <input type="text" name="telefone" id="telefone" onchange="validaVazio(document.getElementById('telefone').val)">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>E-Mail</td>
+        <td>
+            <input type="text" name="email" id="email" maxlength="100" onchange="validaEmail()">
+            <label class="text-danger" id="msgEmail"></label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Cep</td>
+        <td>
+            <input type="text" name="cep" id="cep" maxlength="10" >
+            <label class="text-danger" id="msgCep"></label>
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td>Profissão</td>
+        <td>
+            <input type="text" name="profissao" id="profissao">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>Mensagem </td>
+        <td></td>
+    </tr>
+
+
+</table>
+
+
+
+</html>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+<script>
+
+    function validaEmail() {
+        texto = document.getElementById('email').value;
+
+        if (checarEmail(texto)) {
+            document.getElementById('msgEmail').innerText = "ok";
+        }
+        else {
+            document.getElementById('msgEmail').innerText = "o campo está em formato inválido !";
+
+        }
+    }
+
+
+ 
+    function validaVazio(valor) {
+        if( valor.length == 0 )
+           return false;
+        
+        return true;
+    }
+
+
+    function checarEmail(email) {
+        if ((email.length != 0) && ((email.indexOf("@") < 1) || (email.indexOf('.') < 7))) {
+            return false;
+        }
+        return true;
+    }
+
+
+    jQuery("#telefone")
+        .mask("(99) 9999-9999?9")
+        .focusout(function (event) {
+            var target, phone, element;
+            target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+            phone = target.value.replace(/\D/g, '');
+            element = $(target);
+            element.unmask();
+            if (phone.length > 10) {
+                element.mask("(99) 99999-999?9");
+            } else {
+                element.mask("(99) 9999-9999?9");
+            }
+        });
+
+        jQuery("#cep").mask("99.999-999");
+
+
+</script>

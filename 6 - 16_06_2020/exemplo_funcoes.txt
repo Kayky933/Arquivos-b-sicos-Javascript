@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p id="demo"></p>
+
+<script>
+
+/*
+document.getElementById("demo").innerHTML =
+"O valor com imposto é " + valorComImposto(4331).toFixed(2).replace(".", ",") + " R$";
+*/
+
+document.getElementById("demo").innerHTML =
+"O valor com imposto é " + valorComImposto(4331).toLocaleString('pt-br', {minimumFractionDigits: 2});
+
+function valorComImposto(valor) {
+  return valor * 1.12;
+} 
+
+function valorComImposto() {
+  var valor = document.getElementById('preco').value;
+  return valor * 1.12;
+} 
+
+
+
+</script>
+
+</body>
+</html>

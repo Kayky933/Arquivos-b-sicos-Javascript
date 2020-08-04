@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<body>
+    <form>
+            <label>Idade do atleta</label>
+            <input type="text" id="idade">
+            <input type="button" onclick="funcaoIdade()" value="Categoria">
+            <input type="reset" id="reset" value="limpar">
+       
+        </form>
+</body>
+</div>
+<script>
+
+    function funcaoIdade() {
+        var idade = Number(document.getElementById("idade").value);
+        if (idade >= 5 && idade <= 9) {
+            alert("Pré-Mirim");
+            document.body.style.backgroundColor = "green";
+
+        } else
+            if (idade >= 10 && idade <= 14) {
+                alert("Mirim");
+                document.body.style.backgroundColor = "blue";
+            } else
+                if (idade >= 15 && idade <= 18) {
+                    alert("Juvenil");
+                    document.body.style.backgroundColor = "yellow";
+                } else {
+                    alert("Não possui categoria");
+                    document.body.style.backgroundColor = "red";
+                }
+    }
+
+</script>

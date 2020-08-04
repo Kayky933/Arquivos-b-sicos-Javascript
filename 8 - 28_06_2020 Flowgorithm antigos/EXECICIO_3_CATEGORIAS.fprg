@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Controle"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-27 10:19:12 "/>
+        <attribute name="created" value="Q29udHJvbGU7UENQUk9GLUxBQjAxOzIwMjAtMDItMjc7IjEwOjE2OjE1ICI7MjgyOQ=="/>
+        <attribute name="edited" value="Q29udHJvbGU7UENQUk9GLUxBQjAxOzIwMjAtMDItMjc7IjEwOjE5OjEyICI7MTsyOTM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="IDADE" type="Integer" array="False" size=""/>
+            <input variable="IDADE"/>
+            <if expression="IDADE &gt;= 5 &amp;&amp; IDADE &lt;= 9">
+                <then>
+                    <output expression="&quot;PR&#201;-MIRIM&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="IDADE &gt;= 10 &amp;&amp; IDADE &lt;=14">
+                        <then>
+                            <output expression="&quot;MIRIM&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="IDADE &gt;= 15 &amp;&amp; IDADE &lt;= 18">
+                                <then>
+                                    <output expression="&quot;JUVENIL&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;N&#195;O POSSUI CATEGORIA&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

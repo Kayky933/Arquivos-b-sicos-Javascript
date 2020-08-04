@@ -1,0 +1,23 @@
+<label>Horas</label>
+<input type="text" name="horas" id="horas">
+
+<input type="button" onclick="calcular()" value="Executar">
+
+<script>
+    function calcular() {
+        var horas = document.getElementById("horas").value;
+
+        if (horas <= 120) {
+            var valor = horas * 12;
+        }
+        else if (horas <= 160) {
+            var valor = horas * 14;
+        } else {
+            var valor = horas * 15;
+        }
+        alert("O valor é R$" + valor );
+    }
+
+
+    
+</script>

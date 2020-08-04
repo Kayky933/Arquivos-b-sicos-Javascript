@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Controle"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-10 08:42:41 "/>
+        <attribute name="created" value="Q29udHJvbGU7UENQUk9GLUxBQjAxOzIwMjAtMDMtMTA7IjA4OjEwOjI2ICI7MjgyNQ=="/>
+        <attribute name="edited" value="Q29udHJvbGU7UENQUk9GLUxBQjAxOzIwMjAtMDMtMTA7IjA4OjQyOjQxICI7MTsyOTM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="media" type="Real" array="False" size=""/>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <declare name="soma" type="Real" array="False" size=""/>
+            <declare name="nota" type="Real" array="False" size=""/>
+            <declare name="quant" type="Integer" array="False" size=""/>
+            <assign variable="soma" expression="0"/>
+            <assign variable="contador" expression="0"/>
+            <input variable="quant"/>
+            <do expression="contador &lt; quant">
+                <assign variable="contador" expression="contador + 1"/>
+                <output expression="&quot;Digite a nota do &quot; &amp; contador &amp; &quot; aluno:&quot;" newline="True"/>
+                <input variable="nota"/>
+                <assign variable="soma" expression="soma + nota"/>
+            </do>
+            <assign variable="media" expression="soma / quant"/>
+            <output expression="media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

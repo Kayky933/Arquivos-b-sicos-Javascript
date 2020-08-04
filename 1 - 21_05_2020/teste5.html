@@ -1,0 +1,23 @@
+
+
+<label>Idade</label>
+<input type="text" name="idade" id="idade">
+
+<input type="button" onclick="calcular()" value="Executar">
+
+<script>
+function calcular() {
+    var idade = document.getElementById("idade").value;
+    
+    if( idade < 12 || idade >= 60 ) {
+        alert("meia-entrada");
+        //document.write("Meia entrada");
+    }
+    else{
+        alert("taxa normal");
+        //document.write("taxa normal");
+    }
+}
+
+alert('oi');
+</script>

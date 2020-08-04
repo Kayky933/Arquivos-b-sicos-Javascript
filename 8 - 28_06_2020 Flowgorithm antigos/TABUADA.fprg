@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Kayky"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-05-07 10:19:04 "/>
+        <attribute name="created" value="S2F5a3k7S0FZS1ktUEM7MjAyMC0wNS0wNzsiMDk6MTI6NDggIjsyMzAx"/>
+        <attribute name="edited" value="S2F5a3k7S0FZS1ktUEM7MjAyMC0wNS0wNzsiMTA6MDE6NTkgIjsxOzI0MDE="/>
+        <attribute name="edited" value="TWFyY2lvIE5penpvbGE7MDAwODcwOzIwMjAtMDUtMDc7IjEwOjE5OjA0ICI7MTsyOTc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NUMERO" type="Integer" array="False" size=""/>
+            <declare name="TABUADA" type="Integer" array="False" size=""/>
+            <declare name="CONTADOR" type="Integer" array="False" size=""/>
+            <assign variable="CONTADOR" expression="0"/>
+            <output expression="&quot;Digite um n&#250;mero para saber sua tabuada&quot;" newline="True"/>
+            <input variable="NUMERO"/>
+            <while expression="CONTADOR &lt; 1000">
+                <assign variable="CONTADOR" expression="CONTADOR + 1"/>
+                <assign variable="TABUADA" expression="NUMERO * CONTADOR"/>
+                <output expression="CONTADOR &amp; &quot;x&quot; &amp; NUMERO &amp;&quot;=&quot; &amp; TABUADA" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

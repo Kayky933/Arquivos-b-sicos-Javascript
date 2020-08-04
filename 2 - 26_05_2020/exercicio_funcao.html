@@ -1,0 +1,36 @@
+<script charset="utf-8"></script>
+<script>
+var quant = 0;
+var soma = 0;
+do {
+    var n1 = receber("digite a 1ª nota :");
+    var n2 = receber("digite a 2ª nota :");
+        
+    var med = (n1+n2)/2;
+
+    //alert("A média é:" + med );
+    document.write("A média é:" + med ); 
+    
+    quant ++;      //mesmo que: quant = quant + 1;
+    soma += med;   //soma = soma + med;
+    
+    var p = prompt("Deseja continuar ?");
+
+} while(p == "S" || p == "s" );
+var mg = soma / quant;
+
+alert("A média geral foi:" + mg);
+
+alert("A quantidade foi:" + quant );
+
+function receber( frase ) {
+    var num = -1;
+    do {
+        num = Number( prompt(frase));
+        if( num < 0 || num > 10 )
+            alert("você digitou errado? a nota deve ser de 0 a 10 !");
+    } while( num < 0 || num > 10 );
+    return num;
+}
+
+</script>

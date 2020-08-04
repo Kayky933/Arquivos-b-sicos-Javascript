@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marcio Nizzola"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-05-12 09:46:23 "/>
+        <attribute name="created" value="TWFyY2lvIE5penpvbGE7MDAwODcwOzIwMjAtMDUtMTI7IjA5OjEzOjA1ICI7Mjg2Ng=="/>
+        <attribute name="edited" value="TWFyY2lvIE5penpvbGE7MDAwODcwOzIwMjAtMDUtMTI7IjA5OjQ2OjIzICI7MjsyOTgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="km" type="Integer" array="False" size=""/>
+            <declare name="milha" type="Real" array="False" size=""/>
+            <for variable="km" start="1" end="180" direction="inc" step="1">
+                <assign variable="milha" expression="km / 1.6"/>
+                <output expression="km &amp; &quot;km = &quot; &amp; milha &amp; &quot; M&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

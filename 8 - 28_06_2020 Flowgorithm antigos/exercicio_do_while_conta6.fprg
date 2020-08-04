@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Controle"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-12 09:57:47 "/>
+        <attribute name="created" value="Q29udHJvbGU7UENQUk9GLUxBQjAxOzIwMjAtMDMtMTI7IjA5OjI0OjM4ICI7MjgzNg=="/>
+        <attribute name="edited" value="Q29udHJvbGU7UENQUk9GLUxBQjAxOzIwMjAtMDMtMTI7IjA5OjU3OjQ3ICI7MjsyOTUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="acumulador" type="Integer" array="False" size=""/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <assign variable="acumulador" expression="0"/>
+            <do expression="acumulador &lt; 200">
+                <input variable="numero"/>
+                <output expression="numero *2" newline="True"/>
+                <assign variable="acumulador" expression="acumulador + ( numero * 2)"/>
+            </do>
+            <output expression="acumulador" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

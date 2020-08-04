@@ -1,0 +1,21 @@
+<body>
+<img src="img/lampada-on.jpg" id="myimage">
+
+<input type="checkbox" id="botao" checked="checked" onclick="trocaImagem()">
+</body>
+
+<script> 
+function trocaImagem() { 
+    var elemento = document.getElementById("myimage");          // coloca numa variavel o elemento "myimage"
+    
+    if (elemento.src.match("-on")) { 
+        elemento.src = "img/lampada-off.jpg"; 
+        document.body.style.backgroundColor = "black";      
+    } 
+        else 
+        { 
+            elemento.src = "img/lampada-on.jpg"; 
+            document.body.style.backgroundColor = "white";        
+        } 
+     } 
+</script>

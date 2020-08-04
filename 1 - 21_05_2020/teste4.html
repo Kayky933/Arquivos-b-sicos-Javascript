@@ -1,0 +1,27 @@
+
+
+<label>Número A</label>
+<input type="text" name="numeroA" id="numeroA">
+<label>Número B</label>
+<input type="text" name="numeroB" id="numeroB">
+
+<input type="button" onclick="calcular('+')" value="Somar">
+<input type="button" onclick="calcular('-')" value="Subtrair">
+
+<script>
+function calcular(operacao) {
+    var a = document.getElementById("numeroA").value;
+    var b = document.getElementById("numeroB").value;
+
+    if( operacao == "+") {
+        var res = Number(a) + Number(b);
+    }
+    else{
+        var res = Number(a) - Number(b);
+    }
+
+    alert("O Resultado é:" + res );
+    console.log("teste etec");
+
+}
+</script>

@@ -1,0 +1,28 @@
+<script charset="utf-8"></script>
+<script>
+var quant = 0;
+var soma = 0;
+do {
+    
+    var n1 = Number( prompt("digite a 1ª nota :"));
+    
+    var n2 = Number( prompt("digite a 2ª nota :"));
+
+    var med = (n1+n2)/2;
+
+    //alert("A média é:" + med );
+    document.write("A média é:" + med ); 
+    
+    quant ++;      //mesmo que: quant = quant + 1;
+    soma += med;   //soma = soma + med;
+    
+    var p = prompt("Deseja continuar ?");
+
+} while(p == "S" || p == "s" );
+var mg = soma / quant;
+
+alert("A média geral foi:" + mg);
+
+alert("A quantidade foi:" + quant );
+
+</script>

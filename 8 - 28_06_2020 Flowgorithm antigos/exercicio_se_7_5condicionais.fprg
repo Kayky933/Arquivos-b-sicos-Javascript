@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Marcio Nizzola"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-05-05 10:10:59 "/>
+        <attribute name="created" value="TWFyY2lvIE5penpvbGE7MDAwODcwOzIwMjAtMDUtMDU7IjA5OjU1OjIyICI7Mjg3Mw=="/>
+        <attribute name="edited" value="TWFyY2lvIE5penpvbGE7MDAwODcwOzIwMjAtMDUtMDU7IjEwOjEwOjU5ICI7MTsyOTc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LETRA" type="String" array="False" size=""/>
+            <declare name="QUANT" type="Real" array="False" size=""/>
+            <declare name="TOTAL" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite a Letra&quot;" newline="True"/>
+            <input variable="LETRA"/>
+            <output expression="&quot;Digite a Quantidade&quot;" newline="True"/>
+            <input variable="QUANT"/>
+            <if expression="LETRA = &quot;A&quot;">
+                <then>
+                    <assign variable="TOTAL" expression="10 * QUANT"/>
+                </then>
+                <else>
+                    <if expression="LETRA = &quot;B&quot;">
+                        <then>
+                            <assign variable="TOTAL" expression="12 * QUANT"/>
+                        </then>
+                        <else>
+                            <if expression="LETRA = &quot;C&quot;">
+                                <then>
+                                    <assign variable="TOTAL" expression="14 * QUANT"/>
+                                </then>
+                                <else>
+                                    <if expression="LETRA = &quot;D&quot;">
+                                        <then>
+                                            <assign variable="TOTAL" expression="16 * QUANT"/>
+                                        </then>
+                                        <else>
+                                            <if expression="LETRA = &quot;E&quot;">
+                                                <then>
+                                                    <assign variable="TOTAL" expression="18 * QUANT"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="TOTAL" expression="0"/>
+                                                    <output expression="&quot;LETRA INV&#193;LIDA&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;VALOR TOTAL :&quot; &amp; TOTAL" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
